@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$main-grey-color: #676767;
+$main-lighter-grey-color: #CECBC8;
+$main-orange-color: #D66A37;
+$light-grey-background: #F6F7F5;
+$primary-button-color: #5EACD9;
+$primary-button-hover-color: #2E8EC4;
+$white-color: #ffffff;
+
+.basket {
+  width: 80%;
+  max-width: 453px;
+  margin: auto;
+  border: 1px solid $light-grey-background;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: $main-grey-color;
+  box-shadow: 0 0 3px $main-lighter-grey-color;
+}
+
+.basket-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
+  border-bottom: 1px dashed $main-lighter-grey-color;
+  height: 100%;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.basket-item-title {
+  position: relative;
+  display: inline;
+  width: 45%;
+}
+
+.basket-item-quantity {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $main-lighter-grey-color;
+  border-radius: 2px;
+  text-align: center;
+  
+  input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: $main-grey-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #6FB4DC;
+    box-shadow: 0px 0px 2px #6FB4DC;
+  }
+}
+
+.basket-item-total-price {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  width: 105px;
+  color: $main-orange-color;
+
+  &-num {
+    margin-left: auto;
+  }
+}
+
+.basket-remove-button-container {
+  border: none;
+  background: none;
+}
+
+.basket-remove-button {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.basket-checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: auto;
+  padding: 0 30px;
+  background-color: $light-grey-background;
+}
+
+.basket-checkout-total {
+  width: 45%;
+  font-size: 20px;
+}
+
+.basket-checkout-clear-button {
+  margin-right: 10px;
+  border: none;
+  background: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: $main-grey-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.basket-checkout-checkout-button {
+  position: relative;
+  display: flex;
+  padding: 0 10px;
+  height: 40px;
+  border: 2px solid $primary-button-color;
+  background-color: $primary-button-color;
+  color: $white-color;
+  border-radius: 3px;
+
+  &-text {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-button-hover-color;
+    border-color: $primary-button-hover-color;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
