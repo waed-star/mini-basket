@@ -142,6 +142,19 @@ $white-color: #ffffff;
     background-color: $primary-button-hover-color;
     border-color: $primary-button-hover-color;
   }
+
+  &:after{
+    content: '';
+    background-image: url('../../assets/svg/arrow.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    top: 22.5px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    padding: 0 10px;
+  }
 }
 
 input::-webkit-outer-spin-button,

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export const BasektTotal = ({
   basektTotal,
@@ -19,7 +19,7 @@ export const BasektTotal = ({
         Clear
       </button>
       <div className="basket-checkout-checkout-button">
-        <p className="basket-checkout-checkout-button-text">Check Out {'>'}</p>
+        <p className="basket-checkout-checkout-button-text">Check Out</p>
       </div>
   </div>
   )
