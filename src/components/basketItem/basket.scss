@@ -17,6 +17,10 @@ $white-color: #ffffff;
   font-weight: 900;
   color: $main-grey-color;
   box-shadow: 0 0 3px $main-lighter-grey-color;
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 .basket-item {

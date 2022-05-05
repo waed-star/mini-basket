@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import BasketItem from "./BasketItem"
 import BasketTotal from "./BasketTotal"
+import LoadingSpinner from '../loadingSpinner/LoadingSpinner'
 
 import { getStoreProducts } from '../../api'
 
@@ -13,6 +14,7 @@ export const Basket = ({
   const [showItems, setShowItems] = useState(true)
   const [basektTotal, setBasketTotal] = useState(0)
   const [products, setProducts] = useState()
+  const [isLoading, setIsLoading] = useState(false)
 
   const calculateInitialBasketTotal = () => {
     var sum = 0
@@ -25,6 +27,7 @@ export const Basket = ({
   }
 
   useEffect(() => {
+    setIsLoading(true)
     getStoreProducts(randomProductNum).then((data) => {
       setProducts(data)
     })
@@ -32,6 +35,7 @@ export const Basket = ({
 
   useEffect(() => {
     calculateInitialBasketTotal()
+    setIsLoading(false)
   },[products])
 
   useEffect(() => {
@@ -40,7 +44,9 @@ export const Basket = ({
 
   return (
     <div className="App">
-      <div className="basket">
+      {isLoading ?
+        <LoadingSpinner />
+        : <div className="basket">
         {showItems ?
           <div className="basket-items">
             {products?.map((product) =>
@@ -59,6 +65,7 @@ export const Basket = ({
           setBasketTotal={setBasketTotal}
         />
       </div>
+      }
     </div>
   )
 }
