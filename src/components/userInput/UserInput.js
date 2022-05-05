@@ -4,11 +4,13 @@ import './userInput.scss'
 
 const UserInput = ({
   randomProductNum,
-  setRandomProductNum
+  setRandomProductNum,
+  setShowItems
 }) => {
 
   const handleInputChange = (event) => {
     setRandomProductNum(event.target.value)
+    setShowItems(true)
   }
 
   return (

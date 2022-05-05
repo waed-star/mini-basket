@@ -9,9 +9,11 @@ import { getStoreProducts } from '../../api'
 import './basket.scss'
 
 export const Basket = ({
-  randomProductNum
+  randomProductNum,
+  setShowItems,
+  showItems
 }) => {
-  const [showItems, setShowItems] = useState(true)
+
   const [basektTotal, setBasketTotal] = useState(0)
   const [products, setProducts] = useState()
   const [isLoading, setIsLoading] = useState(false)
