@@ -34,10 +34,10 @@ const BasketItem = ({
     showItem ?
       <div className="basket-item">
         <p className="basket-item-title">{itemTitle}</p>
-        <input maxLength="2" id='input' onInput={handleQuanityChange} className="basket-item-quantity" type="number" defaultValue={itemQuantity} />
+        <input aria-label='Quantity' maxLength="2" id='input' onInput={handleQuanityChange} className="basket-item-quantity" type="number" defaultValue={itemQuantity} />
         <div className="basket-item-total-price">
           <p className="basket-item-total-price-num">£ {totalItemPrice.toFixed(2)}</p>
-          <button onClick={handleRemoveButton} className='basket-remove-button-container'>
+          <button aria-label='Remove item button' onClick={handleRemoveButton} className='basket-remove-button-container'>
             <CloseIcon className='basket-remove-button'/>
           </button>
         </div>
