@@ -31,6 +31,9 @@ $white-color: #ffffff;
   margin: 0 30px;
   border-bottom: 1px dashed $main-lighter-grey-color;
   height: 100%;
+  @media only screen and (max-width: 600px) {
+    margin: 0 15px;
+  }
 
   &:last-child {
     border-bottom: none;
@@ -101,11 +104,18 @@ $white-color: #ffffff;
   margin: auto;
   padding: 0 30px;
   background-color: $light-grey-background;
+  @media only screen and (max-width: 600px) {
+    padding: 0 15px;
+  }
 }
 
 .basket-checkout-total {
   width: 45%;
   font-size: 20px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 18px;
+  }
 }
 
 .basket-checkout-clear-button {
@@ -130,6 +140,7 @@ $white-color: #ffffff;
   background-color: $primary-button-color;
   color: $white-color;
   border-radius: 3px;
+  width: 147px;
 
   &-text {
     display: flex;
